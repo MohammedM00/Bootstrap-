@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Movie Quiz</title>
+<!-- Bootstrap CSS -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+/>
+</head>
+<body>
+<h1 style="text-align: center;">Movie Quiz</h1>
+<div class="container" style="border: 2px dotted green;">
+
+    <div class="container" style="border: 2px dotted purple;">
+    <p>Choose a question from below.</p>
+    <!-- Question buttons -->
+    <div class="btn-group">
+        <button class="qBtn btn btn-sm btn-info m-4" num="1">Who directed "The Batman 2022"?</button>
+        <a role="button" class="qBtn btn btn-sm btn-info m-4" href="#" num="2">composer of the soundtrack for "Inception"?</a>
+        <input type="button" class="btn btn-sm btn-info m-4 qBtn" value="Which movie won the Academy Award for Best Picture in 2017?" num="3"></input>
+    </div>
+    <div>
+        <p>
+        <span id="question">What actor ... ?</span>
+        <span id = "answer" style="padding:3px;color:purple"></span>
+        </p>
+    </div>
+
+    <!-- Check response and movie information buttons -->
+    <div class="d-grid gap-2 d-md-block">
+        <button id="check" class="btn btn-primary" type="button">Check response ...</button>
+        <button id="movie_info" class="btn btn-primary" type="button">Movie information</button>
+    </div>
+    </div>
+
+    <!-- Actor selection buttons -->
+    <div class="container" style="border: 2px dotted green;">
+    <p>Who portrayed the lead character Katniss Everdeen in "The Hunger Games" film series?</p>
+    <div class="btn-group ">
+        <button class="btn btn-info which_actor" choice="0">Leonardo DiCaprio</button>
+        <button class="btn btn-primary which_actor" choice="1">Jennifer Lawrence</button>
+        <button class="btn btn-warning which_actor" choice="2">Brad Pitt</button>
+    </div>
+    <p id="lead_role"></p>
+    </div>
+    
+    <!-- Checkbox selection for movie genres -->
+    <div class="container" style="border: 2px dotted goldenrod;">
+    <p>Select genres that you enjoy:</p>
+    <div class="btn-group-lg btn-group-toggle" data-toggle="buttons">
+        <input type="checkbox" class="btn-check genre" id="action"  autocomplete="off">
+        <label class="btn btn-outline-info" for="action">Action</label>
+        <input type="checkbox" class="btn-check genre" id="comedy"  autocomplete="off">
+        <label class="btn btn-outline-info" for="comedy" >Comedy</label>
+        <input type="checkbox" class="btn-check genre" id="drama" autocomplete="off">
+        <label class="btn btn-outline-info" for="drama">Drama</label>
+        <input type="checkbox" class="btn-check genre" id="horror" autocomplete="off">
+        <label class="btn btn-outline-info" for="horror">Horror</label>
+        <input type="checkbox" class="btn-check genre" id="sci-fi" autocomplete="off">
+        <label class="btn btn-outline-info" for="sci-fi">Sci-Fi</label>
+    </div>
+    <button class="btn btn-warning" id="submit_genres">Submit</button>
+    <div><p id="selected_genres"></p></div>
+    </div>
+
+    <!-- Radio button selection for movie ratings -->
+    <div class="container" style="border: 2px dotted cyan;">
+    <p>Rate the movie "Avatar".</p>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+        <input type="radio" name="ratings" id="rating_1" autocomplete="off" checked> 1 Star
+        </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="ratings" id="rating_2" autocomplete="off"> 2 Stars
+        </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="ratings" id="rating_3" autocomplete="off"> 3 Stars
+        </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="ratings" id="rating_4" autocomplete="off"> 4 Stars
+        </label>
+        <label class="btn btn-secondary">
+        <input type="radio" name="ratings" id="rating_5" autocomplete="off"> 5 Stars
+        </label>
+    </div>
+    <button class="btn btn-warning" id="submit_rating">Submit</button>
+    <p id="selected_rating"></p>
+    </div>
+
+</div> <!-- closing div for outer container -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
